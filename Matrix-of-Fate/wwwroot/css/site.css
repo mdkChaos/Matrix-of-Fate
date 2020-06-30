@@ -1,0 +1,243 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.text-gold {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 0 1rem;
+}
+
+/* My style */
+
+.str-w6 {
+    stroke-width: 6;
+}
+
+.str-w4 {
+    stroke-width: 4;
+}
+
+.str-w2 {
+    stroke-width: 2;
+}
+
+.str-gold {
+    stroke: #b8860b;
+}
+
+.fill-none {
+    fill: none;
+}
+
+.fill-purple {
+    fill: purple;
+}
+
+.fill-blue {
+    fill: blue;
+}
+
+.fill-lightblue {
+    fill: lightblue;
+}
+
+.fill-green {
+    fill: green;
+}
+
+.fill-yellow {
+    fill: yellow;
+}
+
+.fill-orange {
+    fill: orange;
+}
+
+.fill-indianred {
+    fill: indianred;
+}
+
+.fill-white {
+    fill: white;
+}
+
+.fill-black {
+    fill: black;
+}
+
+.fill-bordo {
+    fill: #b00000;
+}
+
+.fill-gold {
+    fill: #b8860b;
+}
+
+.font {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.f-s24 {
+    font-size: 24px;
+}
+
+.f-s20 {
+    font-size: 20px;
+}
+
+.f-s28 {
+    font-size: 28px;
+}
+
+.block {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    background-color: white;
+    width: 21cm;
+}
+
+#table {
+    border-collapse: collapse;
+    border: #b8860b solid 2px;
+    font-size: 11px;
+}
+
+th, td {
+    border: #b8860b solid 2px;
+    padding: 2px 4px;
+}
+
+#colCenter {
+    background-color: peachpuff;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.indianred {
+    background-color: indianred;
+}
+
+.text-white {
+    color: white;
+    font-weight: bold;
+}
+
+.text-black {
+    color: black;
+    font-weight: bold;
+}
+
+.svg-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 20px 0 0 0;
+}
+
+.container {
+    width: 21cm;
+}
+
+.font-gabr {
+    font-family: Gabriola;
+}

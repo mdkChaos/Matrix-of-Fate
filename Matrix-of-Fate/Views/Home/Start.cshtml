@@ -1,0 +1,12 @@
+﻿@model Birthday
+@{
+    ViewData["Title"] = "Matrix";
+}
+
+<form class="block" asp-controller="Home" asp-action="Matrix" method="post">
+    <div class="form-group">
+        <label class="font-gabr f-s20 text-gold" asp-for="Birth">Дата рождения</label>
+        <input asp-for="Birth" class="form-control"/>
+    </div>
+    <button class="btn btn-primary font-gabr" type="submit">Рассчитать матрицу</button>
+</form>

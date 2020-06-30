@@ -1,0 +1,836 @@
+﻿@model Matrix
+@{
+    ViewData["Title"] = "Matrix";
+}
+
+<div class="block">
+    <p>Дата рождения: <span>@Model.Birthday</span></p>
+    <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="21cm" height="800"
+         viewBox="0 0 100% 800" baseProfile="full">
+
+        <g id="Rectangle">
+            <rect class="fill-none str-gold str-w6" x="128" y="128" width="544" height="544" />
+            <polygon class="fill-none str-gold str-w6" points="40,400 400,40 760,400 400,760" />
+        </g>
+
+        <g id="Diagonal">
+            <line class="str-gold str-w4" x1="40" y1="400" x2="760" y2="400" />
+            <line class="str-gold str-w4" x1="400" y1="40" x2="400" y2="760" />
+            <line class="str-gold str-w4" x1="128" y1="128" x2="672" y2="672" />
+            <line class="str-gold str-w4" x1="128" y1="672" x2="672" y2="128" />
+        </g>
+
+        <g id="Web">
+            <polygon class="fill-none str-gold str-w2"
+                     points="40,400 128,128 400,40 672,128 760,400 672,672 400,760 128,672" />
+            <polyline class="fill-none str-gold str-w2" points="196,604 130,400 196,196 400,130 604,196" />
+            <polygon class="fill-none str-gold str-w2"
+                     points="220,400 264,264 400,220 536,264 580,400 536,536 400,580 264,536" />
+            <polyline class="fill-none str-gold str-w2"
+                      points="400,520 309,490 280,400 309,309 400,280 490,309" />
+        </g>
+
+        <g id="Circle">
+            <g id="CA">
+                <circle id="CA1" class="fill-purple str-gold str-w2" r="20" cx="128" cy="672" />
+                <circle id="CA2" class="fill-purple str-gold str-w2" r="20" cx="84" cy="536" />
+                <circle id="CA3" class="fill-purple str-gold str-w2" r="20" cx="40" cy="400" />
+                <circle id="CA4" class="fill-purple str-gold str-w2" r="20" cx="84" cy="264" />
+                <circle id="CA5" class="fill-purple str-gold str-w2" r="20" cx="128" cy="128" />
+                <circle id="CA6" class="fill-purple str-gold str-w2" r="20" cx="264" cy="84" />
+                <circle id="CA7" class="fill-purple str-gold str-w2" r="20" cx="400" cy="40" />
+                <circle id="CA8" class="fill-purple str-gold str-w2" r="20" cx="536" cy="84" />
+                <circle id="CA9" class="fill-purple str-gold str-w2" r="20" cx="672" cy="128" />
+            </g>
+            <g id="CB">
+                <circle id="CB1" class="fill-blue str-gold str-w2" r="20" cx="196" cy="604" />
+                <circle id="CB2" class="fill-blue str-gold str-w2" r="20" cx="163" cy="502" />
+                <circle id="CB3" class="fill-blue str-gold str-w2" r="20" cx="130" cy="400" />
+                <circle id="CB4" class="fill-blue str-gold str-w2" r="20" cx="163" cy="298" />
+                <circle id="CB5" class="fill-blue str-gold str-w2" r="20" cx="196" cy="196" />
+                <circle id="CB6" class="fill-blue str-gold str-w2" r="20" cx="298" cy="163" />
+                <circle id="CB7" class="fill-blue str-gold str-w2" r="20" cx="400" cy="130" />
+                <circle id="CB8" class="fill-blue str-gold str-w2" r="20" cx="502" cy="163" />
+                <circle id="CB9" class="fill-blue str-gold str-w2" r="20" cx="604" cy="196" />
+            </g>
+            <g id="CC">
+                <circle id="CC1" class="fill-lightblue str-gold str-w2" r="20" cx="264" cy="536" />
+                <circle id="CC2" class="fill-lightblue str-gold str-w2" r="20" cx="242" cy="468" />
+                <circle id="CC3" class="fill-lightblue str-gold str-w2" r="20" cx="220" cy="400" />
+                <circle id="CC4" class="fill-lightblue str-gold str-w2" r="20" cx="242" cy="332" />
+                <circle id="CC5" class="fill-lightblue str-gold str-w2" r="20" cx="264" cy="264" />
+                <circle id="CC6" class="fill-lightblue str-gold str-w2" r="20" cx="332" cy="242" />
+                <circle id="CC7" class="fill-lightblue str-gold str-w2" r="20" cx="400" cy="220" />
+                <circle id="CC8" class="fill-lightblue str-gold str-w2" r="20" cx="468" cy="242" />
+                <circle id="CC9" class="fill-lightblue str-gold str-w2" r="20" cx="536" cy="264" />
+            </g>
+            <g id="CD">
+                <circle id="CD1" class="fill-green str-gold str-w2" r="20" cx="400" cy="520" />
+                <circle id="CD2" class="fill-green str-gold str-w2" r="20" cx="309" cy="490" />
+                <circle id="CD3" class="fill-green str-gold str-w2" r="20" cx="280" cy="400" />
+                <circle id="CD4" class="fill-green str-gold str-w2" r="20" cx="294.5" cy="354.5" />
+                <circle id="CD5" class="fill-green str-gold str-w2" r="20" cx="309" cy="309" />
+                <circle id="CD6" class="fill-green str-gold str-w2" r="20" cx="354.5" cy="294.5" />
+                <circle id="CD7" class="fill-green str-gold str-w2" r="20" cx="400" cy="280" />
+                <circle id="CD8" class="fill-green str-gold str-w2" r="20" cx="445" cy="294.5" />
+                <circle id="CD9" class="fill-green str-gold str-w2" r="20" cx="490" cy="309" />
+            </g>
+            <g id="CE">
+                <circle id="CE1" class="fill-yellow str-gold str-w2" r="20" cx="400" cy="400" />
+                <circle id="CE2" class="fill-yellow str-gold str-w2" r="20" cx="520" cy="400" />
+                <circle id="CE3" class="fill-yellow str-gold str-w2" r="20" cx="491" cy="491" />
+            </g>
+            <g id="CF">
+                <circle id="CF1" class="fill-orange str-gold str-w2" r="20" cx="558" cy="332" />
+                <circle id="CF2" class="fill-orange str-gold str-w2" r="20" cx="580" cy="400" />
+                <circle id="CF3" class="fill-orange str-gold str-w2" r="20" cx="558" cy="468" />
+                <circle id="CF4" class="fill-orange str-gold str-w2" r="20" cx="536" cy="536" />
+                <circle id="CF5" class="fill-orange str-gold str-w2" r="20" cx="468" cy="558" />
+                <circle id="CF6" class="fill-orange str-gold str-w2" r="20" cx="400" cy="580" />
+                <circle id="CF7" class="fill-orange str-gold str-w2" r="20" cx="332" cy="558" />
+            </g>
+            <g id="CG">
+                <circle id="CG1" class="fill-indianred str-gold str-w2" r="20" cx="716" cy="264" />
+                <circle id="CG2" class="fill-indianred str-gold str-w2" r="20" cx="760" cy="400" />
+                <circle id="CG3" class="fill-indianred str-gold str-w2" r="20" cx="716" cy="536" />
+                <circle id="CG4" class="fill-indianred str-gold str-w2" r="20" cx="672" cy="672" />
+                <circle id="CG5" class="fill-indianred str-gold str-w2" r="20" cx="536" cy="716" />
+                <circle id="CG6" class="fill-indianred str-gold str-w2" r="20" cx="400" cy="760" />
+                <circle id="CG7" class="fill-indianred str-gold str-w2" r="20" cx="264" cy="716" />
+            </g>
+        </g>
+
+        <g id="Text">
+            <g id="TA">
+                <text id="TA1" class="fill-white font f-s24">@Model.A1</text>
+                <text id="TA2" class="fill-white font f-s24">@Model.A2</text>
+                <text id="TA3" class="fill-white font f-s24">@Model.A3</text>
+                <text id="TA4" class="fill-white font f-s24">@Model.A4</text>
+                <text id="TA5" class="fill-white font f-s24">@Model.A5</text>
+                <text id="TA6" class="fill-white font f-s24">@Model.A6</text>
+                <text id="TA7" class="fill-white font f-s24">@Model.A7</text>
+                <text id="TA8" class="fill-white font f-s24">@Model.A8</text>
+                <text id="TA9" class="fill-white font f-s24">@Model.A9</text>
+            </g>
+            <g id="TB">
+                <text id="TB1" class="fill-white font f-s24">@Model.B1</text>
+                <text id="TB2" class="fill-white font f-s24">@Model.B2</text>
+                <text id="TB3" class="fill-white font f-s24">@Model.B3</text>
+                <text id="TB4" class="fill-white font f-s24">@Model.B4</text>
+                <text id="TB5" class="fill-white font f-s24">@Model.B5</text>
+                <text id="TB6" class="fill-white font f-s24">@Model.B6</text>
+                <text id="TB7" class="fill-white font f-s24">@Model.B7</text>
+                <text id="TB8" class="fill-white font f-s24">@Model.B8</text>
+                <text id="TB9" class="fill-white font f-s24">@Model.B9</text>
+            </g>
+            <g id="TC">
+                <text id="TC1" class="fill-black font f-s24">@Model.C1</text>
+                <text id="TC2" class="fill-black font f-s24">@Model.C2</text>
+                <text id="TC3" class="fill-black font f-s24">@Model.C3</text>
+                <text id="TC4" class="fill-black font f-s24">@Model.C4</text>
+                <text id="TC5" class="fill-black font f-s24">@Model.C5</text>
+                <text id="TC6" class="fill-black font f-s24">@Model.C6</text>
+                <text id="TC7" class="fill-black font f-s24">@Model.C7</text>
+                <text id="TC8" class="fill-black font f-s24">@Model.C8</text>
+                <text id="TC9" class="fill-black font f-s24">@Model.C9</text>
+            </g>
+            <g id="TD">
+                <text id="TD1" class="fill-white font f-s24">@Model.D1</text>
+                <text id="TD2" class="fill-white font f-s24">@Model.D2</text>
+                <text id="TD3" class="fill-white font f-s24">@Model.D3</text>
+                <text id="TD4" class="fill-white font f-s24">@Model.D4</text>
+                <text id="TD5" class="fill-white font f-s24">@Model.D5</text>
+                <text id="TD6" class="fill-white font f-s24">@Model.D6</text>
+                <text id="TD7" class="fill-white font f-s24">@Model.D7</text>
+                <text id="TD8" class="fill-white font f-s24">@Model.D8</text>
+                <text id="TD9" class="fill-white font f-s24">@Model.D9</text>
+            </g>
+            <g id="TE">
+                <text id="TE1" class="fill-black font f-s24">@Model.E1</text>
+                <text id="TE2" class="fill-black font f-s24">@Model.E2</text>
+                <text id="TE3" class="fill-black font f-s24">@Model.E3</text>
+            </g>
+            <g id="TF">
+                <text id="TF1" class="fill-black font f-s24">@Model.F1</text>
+                <text id="TF2" class="fill-black font f-s24">@Model.F2</text>
+                <text id="TF3" class="fill-black font f-s24">@Model.F3</text>
+                <text id="TF4" class="fill-black font f-s24">@Model.F4</text>
+                <text id="TF5" class="fill-black font f-s24">@Model.F5</text>
+                <text id="TF6" class="fill-black font f-s24">@Model.F6</text>
+                <text id="TF7" class="fill-black font f-s24">@Model.F7</text>
+            </g>
+            <g id="TG">
+                <text id="TG1" class="fill-white font f-s24">@Model.G1</text>
+                <text id="TG2" class="fill-white font f-s24">@Model.G2</text>
+                <text id="TG3" class="fill-white font f-s24">@Model.G3</text>
+                <text id="TG4" class="fill-white font f-s24">@Model.G4</text>
+                <text id="TG5" class="fill-white font f-s24">@Model.G5</text>
+                <text id="TG6" class="fill-white font f-s24">@Model.G6</text>
+                <text id="TG7" class="fill-white font f-s24">@Model.G7</text>
+            </g>
+        </g>
+    </svg>
+    <table id="table">
+        <colgroup>
+            <col span="4">
+            <col id="colCenter">
+        </colgroup>
+        <tr>
+            <th>Чакры</br>Поколения</th>
+            <th>Небо</br>Духовн. накопл.</br>Мужского рода</th>
+            <th>Земля</br>Матер. накопл.</br>Мужского рода</th>
+            <th>Целостный ключ</br>Отраб. по линии</br>Мужского рода</th>
+            <th>Целостный ключ</br>Отработки родов</th>
+            <th>Целостный ключ</br>Отраб. по линии</br>Женского рода</th>
+            <th>Небо</br>Духовн. накопл.</br>Женского рода</th>
+            <th>Земля</br>Матер. накопл.</br>Женского рода</th>
+        </tr>
+        <tr>
+            <td class="purple text-white">7 Чакра</br>1 Поколение</td>
+            <td class="f-s20">@Model.R1C1</td>
+            <td class="f-s20">@Model.R1C2</td>
+            <td class="f-s20">@Model.R1C3</td>
+            <td class="f-s20 text-black">@Model.R1C4</td>
+            <td class="f-s20">@Model.R1C5</td>
+            <td class="f-s20">@Model.R1C6</td>
+            <td class="f-s20">@Model.R1C7</td>
+        </tr>
+        <tr>
+            <td class="blue text-white">6 Чакра</br>2 Поколение</td>
+            <td class="f-s20">@Model.R2C1</td>
+            <td class="f-s20">@Model.R2C2</td>
+            <td class="f-s20">@Model.R2C3</td>
+            <td class="f-s20 text-black">@Model.R2C4</td>
+            <td class="f-s20">@Model.R2C5</td>
+            <td class="f-s20">@Model.R2C6</td>
+            <td class="f-s20">@Model.R2C7</td>
+        </tr>
+        <tr>
+            <td class="lightblue text-black">5 Чакра</br>3 Поколение</td>
+            <td class="f-s20">@Model.R3C1</td>
+            <td class="f-s20">@Model.R3C2</td>
+            <td class="f-s20">@Model.R3C3</td>
+            <td class="f-s20 text-black">@Model.R3C4</td>
+            <td class="f-s20">@Model.R3C5</td>
+            <td class="f-s20">@Model.R3C6</td>
+            <td class="f-s20">@Model.R3C7</td>
+        </tr>
+        <tr>
+            <td class="green text-white">4 Чакра</br>4 Поколение</td>
+            <td class="f-s20">@Model.R4C1</td>
+            <td class="f-s20">@Model.R4C2</td>
+            <td class="f-s20">@Model.R4C3</td>
+            <td class="f-s20 text-black">@Model.R4C4</td>
+            <td class="f-s20">@Model.R4C5</td>
+            <td class="f-s20">@Model.R4C6</td>
+            <td class="f-s20">@Model.R4C7</td>
+        </tr>
+        <tr>
+            <td class="yellow text-black">3 Чакра</br>5 Поколение</td>
+            <td class="f-s20">@Model.R5C1</td>
+            <td class="f-s20">@Model.R5C2</td>
+            <td class="f-s20">@Model.R5C3</td>
+            <td class="f-s20 text-black">@Model.R5C4</td>
+            <td class="f-s20">@Model.R5C5</td>
+            <td class="f-s20">@Model.R5C6</td>
+            <td class="f-s20">@Model.R5C7</td>
+        </tr>
+        <tr>
+            <td class="orange text-black">2 Чакра</br>6 Поколение</td>
+            <td class="f-s20">@Model.R6C1</td>
+            <td class="f-s20">@Model.R6C2</td>
+            <td class="f-s20">@Model.R6C3</td>
+            <td class="f-s20 text-black">@Model.R6C4</td>
+            <td class="f-s20">@Model.R6C5</td>
+            <td class="f-s20">@Model.R6C6</td>
+            <td class="f-s20">@Model.R6C7</td>
+        </tr>
+        <tr>
+            <td class="indianred text-white">1 Чакра</br>7 Поколение</td>
+            <td class="f-s20">@Model.R7C1</td>
+            <td class="f-s20">@Model.R7C2</td>
+            <td class="f-s20">@Model.R7C3</td>
+            <td class="f-s20 text-black">@Model.R7C4</td>
+            <td class="f-s20">@Model.R7C5</td>
+            <td class="f-s20">@Model.R7C6</td>
+            <td class="f-s20">@Model.R7C7</td>
+        </tr>
+    </table>
+    <div class="svg-blocks">
+        <div><img src="~/img/Logo370x283.png"></div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSG">
+                    <!--Circle-->
+                    <circle id="CSG1" class="fill-indianred str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSG2" class="fill-indianred str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSG3" class="fill-indianred str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSG4" class="fill-indianred str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSG5" class="fill-indianred str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSG6" class="fill-indianred str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSG7" class="fill-indianred str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSG8" class="fill-indianred str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSG9" class="fill-indianred str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSG10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSG11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSG12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSG13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSG14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSG15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSG16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSG17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSG18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSG">
+                    <!--Text-->
+                    <text id="TSG1" class="fill-white font f-s24">@Model.SG1</text>
+                    <text id="TSG2" class="fill-white font f-s24">@Model.SG2</text>
+                    <text id="TSG3" class="fill-white font f-s24">@Model.SG3</text>
+                    <text id="TSG4" class="fill-white font f-s24">@Model.SG4</text>
+                    <text id="TSG5" class="fill-white font f-s24">@Model.SG5</text>
+                    <text id="TSG6" class="fill-white font f-s24">@Model.SG6</text>
+                    <text id="TSG7" class="fill-white font f-s24">@Model.SG7</text>
+                    <text id="TSG8" class="fill-white font f-s24">@Model.SG8</text>
+                    <text id="TSG9" class="fill-white font f-s24">@Model.SG9</text>
+                    <text id="TSG10" class="fill-bordo font f-s24">@Model.S7</text>
+                    <text id="TSG11" class="fill-bordo font f-s24">@Model.EA7</text>
+                    <text id="TSG12" class="fill-bordo font f-s24">@Model.SEA7</text>
+                    <text id="TSG13" class="fill-bordo font f-s24">@Model.M7</text>
+                    <text id="TSG14" class="fill-bordo font f-s24">@Model.W7</text>
+                    <text id="TSG15" class="fill-bordo font f-s24">@Model.MW7</text>
+                    <text id="TSG16" class="fill-bordo font f-s24">@Model.SEA7</text>
+                    <text id="TSG17" class="fill-bordo font f-s24">@Model.MW7</text>
+                    <text id="TSG18" class="fill-bordo font f-s24">@Model.K7</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">1 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSF">
+                    <!--Circle-->
+                    <circle id="CSF1" class="fill-orange str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSF2" class="fill-orange str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSF3" class="fill-orange str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSF4" class="fill-orange str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSF5" class="fill-orange str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSF6" class="fill-orange str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSF7" class="fill-orange str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSF8" class="fill-orange str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSF9" class="fill-orange str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSF10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSF11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSF12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSF13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSF14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSF15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSF16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSF17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSF18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSF">
+                    <!--Text-->
+                    <text id="TSF1" class="fill-white font f-s24">@Model.SF1</text>
+                    <text id="TSF2" class="fill-white font f-s24">@Model.SF2</text>
+                    <text id="TSF3" class="fill-white font f-s24">@Model.SF3</text>
+                    <text id="TSF4" class="fill-white font f-s24">@Model.SF4</text>
+                    <text id="TSF5" class="fill-white font f-s24">@Model.SF5</text>
+                    <text id="TSF6" class="fill-white font f-s24">@Model.SF6</text>
+                    <text id="TSF7" class="fill-white font f-s24">@Model.SF7</text>
+                    <text id="TSF8" class="fill-white font f-s24">@Model.SF8</text>
+                    <text id="TSF9" class="fill-white font f-s24">@Model.SF9</text>
+                    <text id="TSF10" class="fill-bordo font f-s24">@Model.S6</text>
+                    <text id="TSF11" class="fill-bordo font f-s24">@Model.EA6</text>
+                    <text id="TSF12" class="fill-bordo font f-s24">@Model.SEA6</text>
+                    <text id="TSF13" class="fill-bordo font f-s24">@Model.M6</text>
+                    <text id="TSF14" class="fill-bordo font f-s24">@Model.W6</text>
+                    <text id="TSF15" class="fill-bordo font f-s24">@Model.MW6</text>
+                    <text id="TSF16" class="fill-bordo font f-s24">@Model.SEA6</text>
+                    <text id="TSF17" class="fill-bordo font f-s24">@Model.MW6</text>
+                    <text id="TSF18" class="fill-bordo font f-s24">@Model.K6</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">2 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSE">
+                    <!--Circle-->
+                    <circle id="CSE1" class="fill-yellow str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSE2" class="fill-yellow str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSE3" class="fill-yellow str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSE4" class="fill-yellow str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSE5" class="fill-yellow str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSE6" class="fill-yellow str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSE7" class="fill-yellow str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSE8" class="fill-yellow str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSE9" class="fill-yellow str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSE10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSE11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSE12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSE13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSE14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSE15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSE16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSE17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSE18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSE">
+                    <!--Text-->
+                    <text id="TSE1" class="fill-black font f-s24">@Model.SE1</text>
+                    <text id="TSE2" class="fill-black font f-s24">@Model.SE2</text>
+                    <text id="TSE3" class="fill-black font f-s24">@Model.SE3</text>
+                    <text id="TSE4" class="fill-black font f-s24">@Model.SE4</text>
+                    <text id="TSE5" class="fill-black font f-s24">@Model.SE5</text>
+                    <text id="TSE6" class="fill-black font f-s24">@Model.SE6</text>
+                    <text id="TSE7" class="fill-black font f-s24">@Model.SE7</text>
+                    <text id="TSE8" class="fill-black font f-s24">@Model.SE8</text>
+                    <text id="TSE9" class="fill-black font f-s24">@Model.SE9</text>
+                    <text id="TSE10" class="fill-bordo font f-s24">@Model.S5</text>
+                    <text id="TSE11" class="fill-bordo font f-s24">@Model.EA5</text>
+                    <text id="TSE12" class="fill-bordo font f-s24">@Model.SEA5</text>
+                    <text id="TSE13" class="fill-bordo font f-s24">@Model.M5</text>
+                    <text id="TSE14" class="fill-bordo font f-s24">@Model.W5</text>
+                    <text id="TSE15" class="fill-bordo font f-s24">@Model.MW5</text>
+                    <text id="TSE16" class="fill-bordo font f-s24">@Model.SEA5</text>
+                    <text id="TSE17" class="fill-bordo font f-s24">@Model.MW5</text>
+                    <text id="TSE18" class="fill-bordo font f-s24">@Model.K5</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">3 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSD">
+                    <!--Circle-->
+                    <circle id="CSD1" class="fill-green str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSD2" class="fill-green str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSD3" class="fill-green str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSD4" class="fill-green str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSD5" class="fill-green str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSD6" class="fill-green str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSD7" class="fill-green str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSD8" class="fill-green str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSD9" class="fill-green str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSD10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSD11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSD12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSD13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSD14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSD15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSD16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSD17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSD18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSD">
+                    <!--Text-->
+                    <text id="TSD1" class="fill-white font f-s24">@Model.SD1</text>
+                    <text id="TSD2" class="fill-white font f-s24">@Model.SD2</text>
+                    <text id="TSD3" class="fill-white font f-s24">@Model.SD3</text>
+                    <text id="TSD4" class="fill-white font f-s24">@Model.SD4</text>
+                    <text id="TSD5" class="fill-white font f-s24">@Model.SD5</text>
+                    <text id="TSD6" class="fill-white font f-s24">@Model.SD6</text>
+                    <text id="TSD7" class="fill-white font f-s24">@Model.SD7</text>
+                    <text id="TSD8" class="fill-white font f-s24">@Model.SD8</text>
+                    <text id="TSD9" class="fill-white font f-s24">@Model.SD9</text>
+                    <text id="TSD10" class="fill-bordo font f-s24">@Model.S4</text>
+                    <text id="TSD11" class="fill-bordo font f-s24">@Model.EA4</text>
+                    <text id="TSD12" class="fill-bordo font f-s24">@Model.SEA4</text>
+                    <text id="TSD13" class="fill-bordo font f-s24">@Model.M4</text>
+                    <text id="TSD14" class="fill-bordo font f-s24">@Model.W4</text>
+                    <text id="TSD15" class="fill-bordo font f-s24">@Model.MW4</text>
+                    <text id="TSD16" class="fill-bordo font f-s24">@Model.SEA4</text>
+                    <text id="TSD17" class="fill-bordo font f-s24">@Model.MW4</text>
+                    <text id="TSD18" class="fill-bordo font f-s24">@Model.K4</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">4 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSC">
+                    <!--Circle-->
+                    <circle id="CSC1" class="fill-lightblue str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSC2" class="fill-lightblue str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSC3" class="fill-lightblue str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSC4" class="fill-lightblue str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSC5" class="fill-lightblue str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSC6" class="fill-lightblue str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSC7" class="fill-lightblue str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSC8" class="fill-lightblue str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSC9" class="fill-lightblue str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSC10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSC11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSC12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSC13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSC14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSC15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSC16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSC17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSC18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSC">
+                    <!--Text-->
+                    <text id="TSC1" class="fill-black font f-s24">@Model.SC1</text>
+                    <text id="TSC2" class="fill-black font f-s24">@Model.SC2</text>
+                    <text id="TSC3" class="fill-black font f-s24">@Model.SC3</text>
+                    <text id="TSC4" class="fill-black font f-s24">@Model.SC4</text>
+                    <text id="TSC5" class="fill-black font f-s24">@Model.SC5</text>
+                    <text id="TSC6" class="fill-black font f-s24">@Model.SC6</text>
+                    <text id="TSC7" class="fill-black font f-s24">@Model.SC7</text>
+                    <text id="TSC8" class="fill-black font f-s24">@Model.SC8</text>
+                    <text id="TSC9" class="fill-black font f-s24">@Model.SC9</text>
+                    <text id="TSC10" class="fill-bordo font f-s24">@Model.S3</text>
+                    <text id="TSC11" class="fill-bordo font f-s24">@Model.EA3</text>
+                    <text id="TSC12" class="fill-bordo font f-s24">@Model.SEA3</text>
+                    <text id="TSC13" class="fill-bordo font f-s24">@Model.M3</text>
+                    <text id="TSC14" class="fill-bordo font f-s24">@Model.W3</text>
+                    <text id="TSC15" class="fill-bordo font f-s24">@Model.MW3</text>
+                    <text id="TSC16" class="fill-bordo font f-s24">@Model.SEA3</text>
+                    <text id="TSC17" class="fill-bordo font f-s24">@Model.MW3</text>
+                    <text id="TSC18" class="fill-bordo font f-s24">@Model.K3</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">5 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSB">
+                    <!--Circle-->
+                    <circle id="CSB1" class="fill-blue str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSB2" class="fill-blue str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSB3" class="fill-blue str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSB4" class="fill-blue str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSB5" class="fill-blue str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSB6" class="fill-blue str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSB7" class="fill-blue str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSB8" class="fill-blue str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSB9" class="fill-blue str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSB10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSB11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSB12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSB13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSB14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSB15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSB16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSB17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSB18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSB">
+                    <!--Text-->
+                    <text id="TSB1" class="fill-white font f-s24">@Model.SB1</text>
+                    <text id="TSB2" class="fill-white font f-s24">@Model.SB2</text>
+                    <text id="TSB3" class="fill-white font f-s24">@Model.SB3</text>
+                    <text id="TSB4" class="fill-white font f-s24">@Model.SB4</text>
+                    <text id="TSB5" class="fill-white font f-s24">@Model.SB5</text>
+                    <text id="TSB6" class="fill-white font f-s24">@Model.SB6</text>
+                    <text id="TSB7" class="fill-white font f-s24">@Model.SB7</text>
+                    <text id="TSB8" class="fill-white font f-s24">@Model.SB8</text>
+                    <text id="TSB9" class="fill-white font f-s24">@Model.SB9</text>
+                    <text id="TSB10" class="fill-bordo font f-s24">@Model.S2</text>
+                    <text id="TSB11" class="fill-bordo font f-s24">@Model.EA2</text>
+                    <text id="TSB12" class="fill-bordo font f-s24">@Model.SEA2</text>
+                    <text id="TSB13" class="fill-bordo font f-s24">@Model.M2</text>
+                    <text id="TSB14" class="fill-bordo font f-s24">@Model.W2</text>
+                    <text id="TSB15" class="fill-bordo font f-s24">@Model.MW2</text>
+                    <text id="TSB16" class="fill-bordo font f-s24">@Model.SEA2</text>
+                    <text id="TSB17" class="fill-bordo font f-s24">@Model.MW2</text>
+                    <text id="TSB18" class="fill-bordo font f-s24">@Model.K2</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">6 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+        <div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="396" height="100%" viewBox="0 0 100% 100%"
+                 baseProfile="full">
+
+                <g>
+                    <!-- Rectangle -->
+                    <rect class="fill-none str-gold str-w6" x="60" y="60" width="170" height="170" />
+                    <polygon class="fill-none str-gold str-w6" points="32.5,145 145,32.5 257.5,145 145,257.5" />
+                </g>
+
+                <g>
+                    <!--Diagonal-->
+                    <line class="str-gold str-w4" x1="32.5" y1="145" x2="257.5" y2="145" />
+                    <line class="str-gold str-w4" x1="145" y1="32.5" x2="145" y2="257.5" />
+                    <line class="str-gold str-w4" x1="60" y1="60" x2="230" y2="230" />
+                    <line class="str-gold str-w4" x1="60" y1="230" x2="230" y2="60" />
+                </g>
+
+                <g>
+                    <!--Web-->
+                    <polygon class="fill-none str-gold str-w2" points="32.5,145 60,60 145,32.5 230,60 257.5,145 230,230 145,257.5 60,230" />
+                </g>
+
+                <g>
+                    <!--Lines-->
+                    <line class="str-gold str-w2" x1="330" y1="30" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="80" x2="370" y2="55" />
+                    <line class="str-gold str-w2" x1="330" y1="130" x2="370" y2="155" />
+                    <line class="str-gold str-w2" x1="330" y1="180" x2="370" y2="155" />
+                </g>
+
+                <g id="CSA">
+                    <!--Circle-->
+                    <circle id="CSA1" class="fill-purple str-gold str-w2" r="20" cx="32.5" cy="145" />
+                    <circle id="CSA2" class="fill-purple str-gold str-w2" r="20" cx="60" cy="60" />
+                    <circle id="CSA3" class="fill-purple str-gold str-w2" r="20" cx="145" cy="32.5" />
+                    <circle id="CSA4" class="fill-purple str-gold str-w2" r="20" cx="230" cy="60" />
+                    <circle id="CSA5" class="fill-purple str-gold str-w2" r="20" cx="257.5" cy="145" />
+                    <circle id="CSA6" class="fill-purple str-gold str-w2" r="20" cx="230" cy="230" />
+                    <circle id="CSA7" class="fill-purple str-gold str-w2" r="20" cx="145" cy="257.5" />
+                    <circle id="CSA8" class="fill-purple str-gold str-w2" r="20" cx="60" cy="230" />
+                    <circle id="CSA9" class="fill-purple str-gold str-w2" r="20" cx="145" cy="145" />
+                    <circle id="CSA10" class="fill-white str-gold str-w2" r="20" cx="330" cy="30" />
+                    <circle id="CSA11" class="fill-white str-gold str-w2" r="20" cx="330" cy="80" />
+                    <circle id="CSA12" class="fill-white str-gold str-w2" r="20" cx="370" cy="55" />
+                    <circle id="CSA13" class="fill-white str-gold str-w2" r="20" cx="330" cy="130" />
+                    <circle id="CSA14" class="fill-white str-gold str-w2" r="20" cx="330" cy="180" />
+                    <circle id="CSA15" class="fill-white str-gold str-w2" r="20" cx="370" cy="155" />
+                    <circle id="CSA16" class="fill-white str-gold str-w2" r="20" cx="270" cy="260" />
+                    <circle id="CSA17" class="fill-white str-gold str-w2" r="20" cx="320" cy="260" />
+                    <circle id="CSA18" class="fill-white str-gold str-w2" r="20" cx="370" cy="260" />
+                </g>
+
+                <g id="TSA">
+                    <!--Text-->
+                    <text id="TSA1" class="fill-white font f-s24">@Model.SA1</text>
+                    <text id="TSA2" class="fill-white font f-s24">@Model.SA2</text>
+                    <text id="TSA3" class="fill-white font f-s24">@Model.SA3</text>
+                    <text id="TSA4" class="fill-white font f-s24">@Model.SA4</text>
+                    <text id="TSA5" class="fill-white font f-s24">@Model.SA5</text>
+                    <text id="TSA6" class="fill-white font f-s24">@Model.SA6</text>
+                    <text id="TSA7" class="fill-white font f-s24">@Model.SA7</text>
+                    <text id="TSA8" class="fill-white font f-s24">@Model.SA8</text>
+                    <text id="TSA9" class="fill-white font f-s24">@Model.SA9</text>
+                    <text id="TSA10" class="fill-bordo font f-s24">@Model.S1</text>
+                    <text id="TSA11" class="fill-bordo font f-s24">@Model.EA1</text>
+                    <text id="TSA12" class="fill-bordo font f-s24">@Model.SEA1</text>
+                    <text id="TSA13" class="fill-bordo font f-s24">@Model.M1</text>
+                    <text id="TSA14" class="fill-bordo font f-s24">@Model.W1</text>
+                    <text id="TSA15" class="fill-bordo font f-s24">@Model.MW1</text>
+                    <text id="TSA16" class="fill-bordo font f-s24">@Model.SEA1</text>
+                    <text id="TSA17" class="fill-bordo font f-s24">@Model.MW1</text>
+                    <text id="TSA18" class="fill-bordo font f-s24">@Model.K1</text>
+                </g>
+                <text class="fill-bordo font f-s24" x="5" y="25">7 Колено</text>
+                <text class="fill-gold font f-s24" x="280" y="40">Н:</text>
+                <text class="fill-gold font f-s24" x="280" y="90">З:</text>
+                <text class="fill-gold font f-s24" x="280" y="140">М:</text>
+                <text class="fill-gold font f-s24" x="280" y="190">Ж:</text>
+                <text class="fill-gold font f-s24" x="265" y="230">Цел. Ключ</text>
+            </svg>
+        </div>
+    </div>
+</div>
